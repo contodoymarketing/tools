@@ -1,0 +1,807 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Generador de Título SEO — Con Todo y Marketing</title>
+<meta name="description" content="Genera y corrige títulos SEO gratis según la intención de búsqueda (informacional, comercial, transaccional, navegacional) y el canal (buscador o Discover). Herramienta de Con Todo y Marketing.">
+<meta name="robots" content="index, follow">
+<meta name="author" content="Con Todo y Marketing">
+<link rel="canonical" href="https://contodoymarketing.cl/generador-de-titulo-seo-gratis/">
+
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://contodoymarketing.cl/generador-de-titulo-seo-gratis/">
+<meta property="og:title" content="Generador de Título SEO Gratis — Con Todo y Marketing">
+<meta property="og:description" content="Genera y corrige títulos SEO gratis según la intención de búsqueda y el canal (buscador o Discover).">
+<meta property="og:image" content="https://contodoymarketing.cl/wp-content/uploads/2026/01/Logo-CTyM.png">
+<meta property="og:locale" content="es_CL">
+
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Generador de Título SEO Gratis — Con Todo y Marketing">
+<meta name="twitter:description" content="Genera y corrige títulos SEO gratis según la intención de búsqueda y el canal (buscador o Discover).">
+<meta name="twitter:image" content="https://contodoymarketing.cl/wp-content/uploads/2026/01/Logo-CTyM.png">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,600;1,700&display=swap" rel="stylesheet">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "Generador de Título SEO",
+  "url": "https://contodoymarketing.cl/generador-de-titulo-seo-gratis/",
+  "description": "Genera y corrige títulos SEO y meta descripciones según la intención de búsqueda (informacional, comercial, transaccional, navegacional) y el canal (buscador o Discover).",
+  "applicationCategory": "BusinessApplication",
+  "operatingSystem": "Web",
+  "isAccessibleForFree": true,
+  "offers": { "@type": "Offer", "price": "0", "priceCurrency": "CLP" },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Con Todo y Marketing",
+    "url": "https://contodoymarketing.cl/",
+    "logo": "https://contodoymarketing.cl/wp-content/uploads/2026/01/Logo-CTyM.png"
+  }
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    { "@type": "Question", "name": "¿Qué es un generador de título SEO?", "acceptedAnswer": { "@type": "Answer", "text": "Es una herramienta que ayuda a escribir el título y la meta descripción de una página siguiendo buenas prácticas de SEO: largo adecuado, palabra clave bien ubicada, y un enfoque que calce con lo que la persona realmente busca." } },
+    { "@type": "Question", "name": "¿Por qué la intención de búsqueda cambia cómo debo titular?", "acceptedAnswer": { "@type": "Answer", "text": "Porque el mismo tema puede servir a objetivos distintos. Un título que funciona para alguien que recién se informa puede espantar a alguien que ya está listo para comprar, y viceversa." } },
+    { "@type": "Question", "name": "¿Qué diferencia hay entre un título para buscador y uno para Discover?", "acceptedAnswer": { "@type": "Answer", "text": "En el buscador, la persona ya escribió una consulta y el título compite siendo el más claro y relevante para esa palabra clave. En Discover nadie buscó nada: el título aparece en un feed y tiene que generar curiosidad por sí solo, sin apoyarse en ninguna keyword." } },
+    { "@type": "Question", "name": "¿Esta herramienta reemplaza la investigación de palabras clave?", "acceptedAnswer": { "@type": "Answer", "text": "No. El generador asume que ya tienes una palabra clave o un tema definido, y te ayuda a convertirlo en un título y una meta descripción efectivos." } },
+    { "@type": "Question", "name": "¿Es gratis usar el generador de título SEO?", "acceptedAnswer": { "@type": "Answer", "text": "Sí, es una herramienta gratuita de Con Todo y Marketing, sin límite de usos ni registro." } },
+    { "@type": "Question", "name": "¿Puedo usar esto para títulos de redes sociales, o solo para SEO?", "acceptedAnswer": { "@type": "Answer", "text": "El modo Discover funciona igual de bien como guía para títulos de contenido pensado para descubrimiento en redes y feeds, aunque la herramienta está calibrada específicamente para title tags y meta descripciones de páginas web." } }
+  ]
+}
+</script>
+
+<style>
+  :root{
+    --bg:#FFFFFF;
+    --card:#FFFFFF;
+    --card-alt:#F7F6F3;
+    --ink:#161217;
+    --ink-soft:#5C5762;
+    --ink-faint:#A6A1AB;
+    --line:#ECEAE6;
+    --brand:#FD87E7;
+    --brand-dark:#B8348F;
+    --good:#0F8F79;
+    --bad:#C23B30;
+
+    --pink:#FD87E7;
+    --olive:#B8B32E;
+    --orange:#F35C35;
+    --indigo:#495BDA;
+    --yellow:#C99A00;
+    --mint:#0F8F79;
+
+    --intent:#495BDA;
+    --intent-bg:#EEF0FC;
+    --radius-lg:22px;
+    --radius-md:14px;
+    --radius-sm:8px;
+  }
+  *{box-sizing:border-box;}
+  ::selection{background:var(--intent-bg);color:var(--ink);}
+  body{
+    margin:0;
+    background:var(--bg);
+    color:var(--ink);
+    font-family:'Montserrat',sans-serif;
+    -webkit-font-smoothing:antialiased;
+  }
+  .wrap{max-width:760px;margin:0 auto;padding:0 24px 140px;}
+  a{color:inherit;}
+
+  /* TOPBAR */
+  .topbar-inner{
+    max-width:760px;margin:0 auto;padding:22px 24px 0;
+    display:flex;align-items:center;justify-content:space-between;
+  }
+  .topbar img{height:26px;}
+  .topbar a.back{
+    font-weight:600;font-size:12.5px;color:var(--ink-faint);text-decoration:none;
+    transition:color .15s ease;
+  }
+  .topbar a.back:hover{color:var(--ink);}
+
+  /* LIVE PREVIEW — sticky signature strip */
+  .preview-bar{
+    position:sticky;top:0;z-index:50;
+    background:rgba(255,255,255,0.86);
+    backdrop-filter:blur(10px);
+    -webkit-backdrop-filter:blur(10px);
+    border-bottom:1px solid var(--line);
+    margin-top:24px;
+  }
+  .preview-inner{
+    max-width:760px;margin:0 auto;padding:14px 24px;
+    display:flex;align-items:center;gap:14px;
+  }
+  .preview-dot{width:9px;height:9px;border-radius:50%;background:var(--intent);flex-shrink:0;transition:background .25s ease;}
+  .preview-label{
+    font-size:10.5px;font-weight:700;text-transform:uppercase;letter-spacing:.06em;
+    color:var(--ink-faint);flex-shrink:0;white-space:nowrap;
+  }
+  .preview-title{
+    font-size:15px;font-weight:700;color:var(--ink);
+    overflow:hidden;text-overflow:ellipsis;white-space:nowrap;
+    transition:opacity .18s ease;
+  }
+  .preview-title.fade{opacity:0;}
+
+  /* HERO */
+  .hero{padding:64px 0 8px;}
+  .eyebrow{
+    font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;
+    color:var(--ink-faint);margin-bottom:18px;display:flex;align-items:center;gap:8px;
+  }
+  .eyebrow .dots{display:flex;gap:4px;}
+  .eyebrow .dots span{width:6px;height:6px;border-radius:50%;display:block;}
+  h1.hero-title{
+    font-weight:800;
+    font-size:clamp(34px,6vw,54px);
+    line-height:1.05;
+    letter-spacing:-0.02em;
+    margin:0 0 20px;
+  }
+  h1.hero-title .hl{color:var(--brand-dark);}
+  .hero p.lede{
+    font-size:16.5px;color:var(--ink-soft);line-height:1.65;max-width:56ch;margin:0;
+  }
+
+  /* SECTION RHYTHM */
+  .section{margin-top:88px;}
+  .section-head{margin-bottom:22px;}
+  .section-head .step-num{
+    font-size:12px;font-weight:700;color:var(--ink-faint);letter-spacing:.04em;
+    display:block;margin-bottom:6px;
+  }
+  .section-head h2{font-weight:800;font-size:24px;margin:0;letter-spacing:-0.01em;}
+  .section-lead{font-size:14px;color:var(--ink-soft);margin:10px 0 0;max-width:58ch;line-height:1.6;}
+
+  /* INTENT SEGMENTED CONTROL */
+  .intent-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;}
+  @media(max-width:640px){.intent-grid{grid-template-columns:1fr 1fr;}}
+  .intent-btn{
+    background:transparent;border:1.5px solid var(--line);border-radius:var(--radius-md);
+    padding:16px 14px;cursor:pointer;text-align:left;
+    transition:border-color .15s ease, background .15s ease;
+  }
+  .intent-btn:hover{border-color:var(--ink-faint);}
+  .intent-btn .name{font-weight:700;font-size:14px;display:block;color:var(--ink);}
+  .intent-btn .desc{font-size:11px;color:var(--ink-faint);display:block;margin-top:4px;line-height:1.4;}
+  .intent-btn.active{border-color:var(--intent);background:var(--intent-bg);}
+  .intent-btn.active .name{color:var(--intent);}
+
+  /* CHANNEL TOGGLE */
+  .channel-toggle{display:inline-flex;border:1.5px solid var(--line);border-radius:100px;padding:3px;}
+  .channel-toggle button{
+    font-weight:700;font-size:12.5px;padding:9px 20px;border:none;border-radius:100px;
+    cursor:pointer;background:transparent;color:var(--ink-faint);transition:all .15s ease;
+  }
+  .channel-toggle button.active{background:var(--ink);color:#fff;}
+  .channel-cols{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:20px;}
+  @media(max-width:640px){.channel-cols{grid-template-columns:1fr;}}
+  .channel-card{border-radius:var(--radius-md);padding:16px 18px;border:1.5px solid var(--line);opacity:0.45;transition:opacity .15s ease, border-color .15s ease;}
+  .channel-card.active{opacity:1;border-color:var(--ink);}
+  .channel-card .ctitle{font-weight:700;font-size:13.5px;margin-bottom:5px;}
+  .channel-card p{font-size:12.5px;color:var(--ink-soft);line-height:1.55;margin:0;}
+
+  /* DYNAMIC PANEL */
+  .panel{
+    background:var(--card-alt);border-radius:var(--radius-lg);
+    padding:26px 26px;margin-top:22px;
+  }
+  .panel .goal-label{
+    font-size:10.5px;text-transform:uppercase;letter-spacing:.07em;color:var(--intent);font-weight:700;
+    display:flex;align-items:center;gap:6px;
+  }
+  .panel .goal-label .gdot{width:6px;height:6px;border-radius:50%;background:var(--intent);}
+  .panel .goal-text{font-weight:700;font-size:17px;margin:8px 0 18px;line-height:1.4;letter-spacing:-0.01em;}
+  .panel-cols{display:grid;grid-template-columns:1fr 1fr;gap:24px;}
+  @media(max-width:640px){.panel-cols{grid-template-columns:1fr;}}
+  .panel-col h4{font-size:10.5px;text-transform:uppercase;letter-spacing:.06em;color:var(--ink-faint);margin:0 0 10px;font-weight:700;}
+  .panel-col p{font-size:13.5px;color:var(--ink-soft);line-height:1.6;margin:0 0 12px;}
+  .struct-list{margin:0;padding:0;list-style:none;}
+  .struct-list li{font-size:13px;color:var(--ink-soft);line-height:1.55;padding:7px 0;border-bottom:1px solid var(--line);}
+  .struct-list li:last-child{border-bottom:none;}
+
+  /* CHECKER */
+  .checker{background:var(--card);border:1.5px solid var(--line);border-radius:var(--radius-lg);padding:28px;margin-top:22px;}
+  .field-label{font-size:10.5px;text-transform:uppercase;letter-spacing:.06em;color:var(--ink-faint);display:block;margin:0 0 7px;font-weight:700;}
+  .field-group{margin-bottom:18px;}
+  .checker input[type=text], .checker textarea{
+    width:100%;border:none;border-bottom:1.5px solid var(--line);
+    border-radius:0;padding:8px 2px;background:transparent;color:var(--ink);
+    transition:border-color .15s ease;
+  }
+  .checker textarea{font-size:19px;font-weight:600;min-height:44px;resize:vertical;}
+  .checker input[type=text]{font-size:14px;font-weight:500;}
+  .checker textarea:focus, .checker input:focus{outline:none;border-color:var(--ink);}
+  .two-col{display:grid;grid-template-columns:1fr 1fr;gap:20px;}
+  @media(max-width:640px){.two-col{grid-template-columns:1fr;}}
+  .char-hint{font-size:11px;color:var(--ink-faint);margin-top:6px;display:block;}
+  .char-hint.over{color:var(--bad);font-weight:700;}
+
+  .score-row{display:flex;align-items:center;gap:16px;margin-top:24px;padding-top:22px;border-top:1px solid var(--line);}
+  .score-circle{
+    font-weight:800;font-size:22px;width:52px;height:52px;border-radius:50%;flex-shrink:0;
+    display:flex;align-items:center;justify-content:center;border:2.5px solid var(--ink);
+  }
+  .score-circle.good{border-color:var(--good);color:var(--good);}
+  .score-circle.mid{border-color:var(--intent);color:var(--intent);}
+  .score-circle.bad{border-color:var(--bad);color:var(--bad);}
+  .score-verdict{font-size:13.5px;color:var(--ink-soft);}
+
+  .checklist{margin-top:16px;}
+  .check-block{margin-bottom:16px;}
+  .check-block .block-title{font-size:10.5px;text-transform:uppercase;color:var(--ink-faint);margin-bottom:8px;letter-spacing:.05em;font-weight:700;}
+  .check-item{display:flex;gap:10px;align-items:flex-start;padding:8px 0;border-bottom:1px solid var(--line);font-size:13px;}
+  .check-item:last-child{border-bottom:none;}
+  .check-item .mark{font-weight:800;width:16px;flex-shrink:0;text-align:center;}
+  .check-item.pass .mark{color:var(--good);}
+  .check-item.fail .mark{color:var(--bad);}
+  .check-item.manual .mark{color:var(--ink-faint);}
+  .check-item .txt span{display:block;color:var(--ink-faint);font-size:12px;margin-top:2px;}
+
+  /* FORMULA BANK */
+  .formula-list{display:flex;flex-direction:column;gap:1px;background:var(--line);border-radius:var(--radius-md);overflow:hidden;}
+  .formula-card{background:var(--card);padding:16px 18px;cursor:pointer;transition:background .15s ease;}
+  .formula-card:hover{background:var(--card-alt);}
+  .formula-card .formula{font-weight:700;font-size:14px;line-height:1.4;}
+  .formula-card .note{font-size:12px;color:var(--ink-faint);margin-top:5px;line-height:1.4;}
+
+  /* PROSE */
+  .prose h2{font-weight:800;font-size:23px;margin:0 0 16px;letter-spacing:-0.01em;}
+  .prose h3{font-weight:700;font-size:15.5px;margin:26px 0 10px;}
+  .prose p{font-size:14.5px;color:var(--ink-soft);line-height:1.75;margin:0 0 15px;max-width:66ch;}
+
+  .steps-3{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;margin-top:20px;background:var(--line);border-radius:var(--radius-md);overflow:hidden;}
+  @media(max-width:640px){.steps-3{grid-template-columns:1fr;}}
+  .step-card{background:var(--card);padding:22px 20px;}
+  .step-card .num{font-weight:800;font-size:22px;color:var(--brand-dark);}
+  .step-card .stitle{font-weight:700;font-size:14px;margin:8px 0 6px;}
+  .step-card p{font-size:12.5px;margin:0;color:var(--ink-soft);line-height:1.5;}
+
+  /* FAQ */
+  .faq-item{border-bottom:1px solid var(--line);}
+  .faq-item summary{font-weight:700;font-size:15px;padding:18px 2px;cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:center;}
+  .faq-item summary::-webkit-details-marker{display:none;}
+  .faq-item summary:after{content:'+';font-size:20px;color:var(--brand-dark);flex-shrink:0;margin-left:12px;font-weight:400;}
+  .faq-item[open] summary:after{content:'–';}
+  .faq-item p{font-size:13.5px;color:var(--ink-soft);line-height:1.65;padding:0 2px 18px;margin:0;max-width:64ch;}
+
+  /* CTA */
+  .cta-box{
+    background:var(--ink);color:#fff;border-radius:var(--radius-lg);
+    padding:40px 34px;margin-top:24px;
+  }
+  .cta-box h3{font-weight:800;font-size:21px;margin:0 0 8px;letter-spacing:-0.01em;}
+  .cta-box p{font-size:13.5px;color:rgba(255,255,255,0.65);margin:0 0 22px;max-width:46ch;line-height:1.6;}
+  .cta-box .cta-btn{
+    display:inline-block;background:#fff;color:var(--ink);font-weight:700;font-size:13.5px;
+    padding:13px 26px;border-radius:100px;text-decoration:none;
+  }
+
+  .footer{
+    margin-top:80px;padding-top:20px;border-top:1px solid var(--line);
+    font-size:11px;color:var(--ink-faint);display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px;
+  }
+  .footer a{color:var(--ink-faint);}
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <div class="topbar-inner">
+    <a href="https://contodoymarketing.cl/" aria-label="Con Todo y Marketing — inicio">
+      <img src="https://contodoymarketing.cl/wp-content/uploads/2026/01/Logo-CTyM.png" alt="Con Todo y Marketing">
+    </a>
+    <a class="back" href="https://contodoymarketing.cl/">← Volver al inicio</a>
+  </div>
+</div>
+
+<div class="preview-bar">
+  <div class="preview-inner">
+    <div class="preview-dot" id="previewDot"></div>
+    <span class="preview-label" id="previewLabel">Informacional · Buscador</span>
+    <span class="preview-title" id="previewTitle">¿Qué es la gratificación legal y cómo se calcula?</span>
+  </div>
+</div>
+
+<div class="wrap">
+
+  <div class="hero">
+    <div class="eyebrow">
+      <span class="dots"><span style="background:#495BDA"></span><span style="background:#F35C35"></span><span style="background:#D858BE"></span></span>
+      Herramienta gratuita · Con Todo y Marketing
+    </div>
+    <h1 class="hero-title">Un título distinto para <span class="hl">cada intención de búsqueda</span></h1>
+    <p class="lede">No hay una fórmula única para escribir un buen título SEO. Alguien que quiere aprender algo, alguien listo para comprar, alguien comparando opciones y alguien que ya te busca a ti por nombre necesitan cuatro títulos completamente distintos. Marca la intención y el resto se adapta — mira la barra de arriba mientras lo haces.</p>
+  </div>
+
+  <!-- SELECTOR -->
+  <div class="section">
+    <div class="section-head">
+      <span class="step-num">01</span>
+      <h2>¿Qué está buscando tu lector?</h2>
+      <p class="section-lead">Elige la intención de la palabra clave o página que estás trabajando.</p>
+    </div>
+
+    <div class="intent-grid" id="intentGrid">
+      <div class="intent-btn active" data-intent="informacional" onclick="setIntent('informacional')">
+        <span class="name">Informacional</span>
+        <span class="desc">Quiere aprender o resolver una duda</span>
+      </div>
+      <div class="intent-btn" data-intent="comercial" onclick="setIntent('comercial')">
+        <span class="name">Comercial</span>
+        <span class="desc">Está comparando antes de decidir</span>
+      </div>
+      <div class="intent-btn" data-intent="transaccional" onclick="setIntent('transaccional')">
+        <span class="name">Transaccional</span>
+        <span class="desc">Quiere comprar o contratar ahora</span>
+      </div>
+      <div class="intent-btn" data-intent="navegacional" onclick="setIntent('navegacional')">
+        <span class="name">Navegacional</span>
+        <span class="desc">Ya te busca a ti, por nombre</span>
+      </div>
+    </div>
+
+    <div class="panel" id="panel"></div>
+  </div>
+
+  <!-- CANAL -->
+  <div class="section">
+    <div class="section-head">
+      <span class="step-num">02</span>
+      <h2>¿Buscador o Discover?</h2>
+      <p class="section-lead">La intención de arriba explica <i>qué</i> quiere el lector. El canal explica <i>cómo</i> lo encuentra — y las reglas de título son distintas en cada uno.</p>
+    </div>
+
+    <div class="channel-toggle">
+      <button class="active" data-channel="buscador" onclick="setChannel('buscador')">Buscador (SEO)</button>
+      <button data-channel="discover" onclick="setChannel('discover')">Discover</button>
+    </div>
+
+    <div class="channel-cols">
+      <div class="channel-card active" id="cardBuscador">
+        <div class="ctitle">Buscador</div>
+        <p>Alguien escribió una consulta. El título compite con otros resultados que responden lo mismo.</p>
+      </div>
+      <div class="channel-card" id="cardDiscover">
+        <div class="ctitle">Discover</div>
+        <p>Nadie buscó nada — el título aparece en un feed y tiene que generar la curiosidad él solo.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- CHECKER -->
+  <div class="section">
+    <div class="section-head">
+      <span class="step-num">03</span>
+      <h2>Prueba tu título y meta descripción</h2>
+      <p class="section-lead">El corrector revisa contra las reglas de la intención <b>y</b> el canal que elegiste arriba.</p>
+    </div>
+
+    <div class="checker">
+      <div class="two-col">
+        <div class="field-group">
+          <label class="field-label">Palabra clave objetivo</label>
+          <input type="text" id="kwInput" placeholder="Ej: contador para pyme" oninput="runCheck()">
+        </div>
+        <div class="field-group" id="brandGroup" style="display:none;">
+          <label class="field-label">Nombre de la marca</label>
+          <input type="text" id="brandInput" placeholder="Ej: Con Todo y Marketing" oninput="runCheck()">
+        </div>
+      </div>
+
+      <div class="field-group">
+        <label class="field-label" id="titleFieldLabel">Título (title tag)</label>
+        <textarea id="titleInput" placeholder="Escribe el título aquí..." oninput="runCheck()"></textarea>
+        <span class="char-hint" id="titleCount">0 / 60 caracteres</span>
+      </div>
+
+      <div class="field-group">
+        <label class="field-label" id="metaFieldLabel">Meta descripción</label>
+        <textarea id="metaInput" placeholder="Escribe la meta descripción aquí..." oninput="runCheck()"></textarea>
+        <span class="char-hint" id="metaCount">0 / 158 caracteres</span>
+      </div>
+
+      <div class="score-row">
+        <div class="score-circle mid" id="scoreCircle">—</div>
+        <div class="score-verdict" id="scoreVerdict">Escribe un título para empezar.</div>
+      </div>
+
+      <div class="checklist" id="checklist"></div>
+    </div>
+  </div>
+
+  <!-- FORMULA BANK -->
+  <div class="section">
+    <div class="section-head">
+      <span class="step-num">04</span>
+      <h2>Fórmulas para esta intención</h2>
+      <p class="section-lead">Click para cargar la fórmula en el corrector de arriba.</p>
+    </div>
+    <div class="formula-list" id="formulaGrid"></div>
+  </div>
+
+  <!-- QUÉ ES -->
+  <div class="section prose">
+    <h2>¿Qué es un generador de título SEO y por qué la intención de búsqueda importa?</h2>
+    <p>Un generador de título SEO típico te da una fórmula genérica y listo. El problema es que un buen título no depende solo de la palabra clave — depende de qué está haciendo la persona en el momento en que lo ve. Alguien que busca "cómo hacer una factura" en Google no quiere lo mismo que alguien que ya decidió contratar un contador, y ninguno de los dos quiere lo mismo que alguien que se topa con tu contenido sin buscar nada, mientras revisa el feed de Google Discover.</p>
+    <p>Por eso este generador de título SEO parte siempre desde dos preguntas: <b>qué quiere el lector</b> (informacional, comercial, transaccional o navegacional) y <b>por dónde te va a encontrar</b> (un buscador, o un feed tipo Discover). Las reglas de título cambian según la combinación, y eso es exactamente lo que ajusta la herramienta cuando marcas tus opciones arriba.</p>
+
+    <h3>Cómo usar el generador en 3 pasos</h3>
+    <div class="steps-3">
+      <div class="step-card">
+        <div class="num">1</div>
+        <div class="stitle">Elige la intención</div>
+        <p>Marca si tu lector quiere aprender, comparar, comprar o si ya te busca por nombre.</p>
+      </div>
+      <div class="step-card">
+        <div class="num">2</div>
+        <div class="stitle">Elige el canal</div>
+        <p>Define si el título va a competir en un buscador o en un feed tipo Discover.</p>
+      </div>
+      <div class="step-card">
+        <div class="num">3</div>
+        <div class="stitle">Escribe y corrige</div>
+        <p>Pega tu título y meta descripción, y el corrector te dice qué falta para esa combinación.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- FAQ -->
+  <div class="section prose">
+    <h2>Preguntas frecuentes</h2>
+    <details class="faq-item" open>
+      <summary>¿Qué es un generador de título SEO?</summary>
+      <p>Es una herramienta que ayuda a escribir el título y la meta descripción de una página siguiendo buenas prácticas de SEO: largo adecuado, palabra clave bien ubicada, y un enfoque que calce con lo que la persona realmente busca.</p>
+    </details>
+    <details class="faq-item">
+      <summary>¿Por qué la intención de búsqueda cambia cómo debo titular?</summary>
+      <p>Porque el mismo tema puede servir a objetivos distintos. "Contador para pyme" puede interesarle a alguien que recién quiere entender qué hace un contador, a alguien comparando opciones, o a alguien listo para contratar. Un título que funciona para uno puede espantar al otro.</p>
+    </details>
+    <details class="faq-item">
+      <summary>¿Qué diferencia hay entre un título para buscador y uno para Discover?</summary>
+      <p>En el buscador, la persona ya escribió una consulta — el título compite siendo el más claro y relevante para esa palabra clave. En Discover nadie buscó nada: el título aparece en un feed y tiene que generar curiosidad por sí solo, sin apoyarse en ninguna keyword.</p>
+    </details>
+    <details class="faq-item">
+      <summary>¿Esta herramienta reemplaza la investigación de palabras clave?</summary>
+      <p>No. El generador asume que ya tienes una palabra clave o un tema definido, y te ayuda a convertirlo en un título y una meta descripción efectivos. Para encontrar esa palabra clave todavía necesitas una herramienta de research (o puedes pedírnoslo directamente).</p>
+    </details>
+    <details class="faq-item">
+      <summary>¿Es gratis usar el generador de título SEO?</summary>
+      <p>Sí, es una herramienta gratuita de Con Todo y Marketing, sin límite de usos ni registro.</p>
+    </details>
+    <details class="faq-item">
+      <summary>¿Puedo usar esto para títulos de redes sociales, o solo para SEO?</summary>
+      <p>El modo Discover funciona igual de bien como guía para títulos de contenido pensado para descubrimiento (redes, feeds), aunque la herramienta está calibrada específicamente para title tags y meta descripciones de páginas web.</p>
+    </details>
+  </div>
+
+  <!-- CTA -->
+  <div class="section">
+    <div class="cta-box">
+      <h3>¿Necesitas implementar esto en tu sitio?</h3>
+      <p>Hacemos estrategia SEO para buscadores completa: títulos, estructura, contenido y seguimiento — no solo la herramienta.</p>
+      <a class="cta-btn" href="https://contodoymarketing.cl/">Conoce el servicio</a>
+    </div>
+  </div>
+
+  <div class="footer">
+    <span>© Con Todo y Marketing · <a href="https://contodoymarketing.cl/">contodoymarketing.cl</a></span>
+    <span>Generador de Título SEO · intención de búsqueda + canal</span>
+  </div>
+
+</div>
+
+<script>
+const INTENTS = {
+  informacional: {
+    color:'#495BDA', colorBg:'#EEF0FC',
+    goal:'Responder una duda o enseñar algo — todavía no está listo para comprar.',
+    titleHint:'Usa formato de pregunta o "cómo / qué es / por qué" + tu palabra clave. Responde antes de vender.',
+    metaHint:'Promete una respuesta clara y concreta. Nada de "cotiza ahora" — todavía no toca.',
+    structure:['Responde la pregunta central en las primeras dos líneas (para featured snippet / resúmenes de IA)','Usa subtítulos en formato pregunta (lo que la gente pregunta después)','Cierra con una sección de preguntas frecuentes','Evita llamados a la venta agresivos en el cuerpo'],
+    formulas:[
+      {f:'¿Qué es [tema] y para qué sirve?', n:'Pregunta directa — bueno para snippet destacado.'},
+      {f:'Cómo [resultado deseado], paso a paso', n:'El "cómo" es el patrón más buscado en informacional.'},
+      {f:'[Tema]: guía completa para pymes chilenas', n:'"Guía completa" señala profundidad, no venta.'},
+      {f:'[Tema] explicado sin tecnicismos', n:'Baja la barrera de entrada para quien recién se informa.'}
+    ],
+    discoverTitleHint:'La pregunta ya no alcanza — necesita gancho. Convierte el "qué es" en un dato que sorprende o un error común.',
+    discoverMetaHint:'La bajada no resume: abre una intriga y suma el dato más sorpresivo, sin spoilear la respuesta completa.',
+    discoverFormulas:[
+      {f:'El error que casi nadie nota al [acción] y que puede salirte caro', n:'Miedo al error — detiene el scroll.'},
+      {f:'Lo que no te explican sobre [tema] antes de intentarlo', n:'Promete información que "falta" — genera curiosidad.'},
+      {f:'¿Por qué [dato contraintuitivo]? Esto es lo que pasa realmente', n:'Dato que desafía la creencia común, verificable.'}
+    ],
+    preview:{buscador:'¿Qué es la gratificación legal y cómo se calcula?', discover:'El error que casi nadie nota al declarar el IVA'}
+  },
+  comercial: {
+    color:'#B8890A', colorBg:'#FBF3DC',
+    goal:'Está comparando opciones antes de decidir — todavía no eligió.',
+    titleHint:'Usa lenguaje comparativo: "mejor", "vs", "comparación", "opiniones", "precios". Es la señal más clara de esta intención.',
+    metaHint:'Menciona los criterios que se están comparando: precio, calidad, cobertura, soporte.',
+    structure:['Tabla comparativa o lista de pros y contras','Explica los criterios de elección (precio, calidad, soporte, etc.)','Reseñas o casos reales si están disponibles — nunca inventados','Un cierre claro: hacia qué opción o siguiente paso apunta la página'],
+    formulas:[
+      {f:'[Producto A] vs [Producto B]: cuál conviene más en 2026', n:'"Vs" es la señal comercial más directa que existe.'},
+      {f:'Los [N] mejores [producto/servicio] para pymes, comparados', n:'Las listas comparativas capturan intención de decisión.'},
+      {f:'[Producto/servicio]: precios, opiniones y cómo elegir', n:'Junta los tres factores que la gente compara.'},
+      {f:'¿[Opción A] o [Opción B]? Guía para decidir según tu pyme', n:'Interpela directo al lector indeciso.'}
+    ],
+    discoverTitleHint:'El "vs" funciona, pero súmale tensión: el error de elegir mal, no solo la comparación fría.',
+    discoverMetaHint:'Sugiere que hay una opción que la mayoría elige mal, sin decir cuál — eso genera el clic.',
+    discoverFormulas:[
+      {f:'[Producto A] o [Producto B]: la comparación que casi nadie te hace antes de elegir', n:'Promete algo que otros no dicen.'},
+      {f:'Por qué elegir [opción] podría salirte más caro de lo que crees', n:'Miedo a la decisión equivocada.'},
+      {f:'Lo que nadie te cuenta antes de contratar [categoría de servicio]', n:'Ángulo de "verdad oculta", verificable y honesto.'}
+    ],
+    preview:{buscador:'Contador online vs contador presencial: cuál conviene a tu pyme', discover:'Por qué elegir el contador más barato podría salirte más caro'}
+  },
+  transaccional: {
+    color:'#F35C35', colorBg:'#FDEBE7',
+    goal:'Quiere comprar, contratar o cotizar ahora mismo.',
+    titleHint:'Incluye un verbo de acción (cotiza, contrata, reserva) y, si tiene sentido, precio o disponibilidad.',
+    metaHint:'Necesita un llamado a la acción explícito y un beneficio concreto, no genérico.',
+    structure:['Precio o rango de precio visible sin hacer scroll','Botón de contacto o cotización sobre la línea de flotación','Señales de confianza: testimonios, garantías, medios de pago','Urgencia real si aplica (cupos, stock, fecha límite) — nunca inventada'],
+    formulas:[
+      {f:'[Servicio] en [ciudad]: cotiza en 24 horas', n:'Acción + urgencia + geografía.'},
+      {f:'[Producto] desde $[monto] — despacho a todo Chile', n:'El precio ancla la decisión de clic.'},
+      {f:'Contrata [servicio] sin letra chica', n:'Verbo de acción + elimina la objeción más común.'},
+      {f:'Agenda tu [servicio] hoy — cupos limitados', n:'Usar solo si el cupo/plazo es real, nunca de adorno.'}
+    ],
+    discoverTitleHint:'Discover no compite bien con "cotiza ahora" — funciona mejor si el gancho es el hallazgo, no la venta directa.',
+    discoverMetaHint:'Lleva la oferta a un descubrimiento: algo que existe y casi nadie está aprovechando todavía.',
+    discoverFormulas:[
+      {f:'Hay una forma de [resultado deseado] que casi nadie está usando todavía', n:'Curiosidad + FOMO, sin sonar a aviso.'},
+      {f:'[Beneficio/oferta] que se acaba pronto y casi nadie sabe que existe', n:'Solo si el plazo o cupo es real.'},
+      {f:'Por qué cada vez más pymes están cambiando de [categoría de servicio]', n:'Ángulo de tendencia, no de venta directa.'}
+    ],
+    preview:{buscador:'Cotiza tu contabilidad mensual desde $49.990', discover:'Hay una forma de ahorrar en contabilidad que casi nadie usa todavía'}
+  },
+  navegacional: {
+    color:'#B8348F', colorBg:'#FBEAF6',
+    goal:'Ya sabe que existes y te está buscando a ti, por nombre.',
+    titleHint:'El nombre de marca va primero y sin relleno. No compite por keyword genérica — compite por ser encontrado.',
+    metaHint:'Refuerza qué es la marca y por qué confiar en ella. No es el lugar para vender un producto genérico.',
+    structure:['El título de la página calza con el nombre exacto de la marca','Refuerza NAP (nombre, dirección, teléfono) si es un negocio local','Usa schema.org Organization o LocalBusiness','No compite con contenido genérico — aquí ya te estaban buscando a ti'],
+    formulas:[
+      {f:'[Nombre de marca] — [qué hace en 3-4 palabras]', n:'El nombre va primero, sin relleno.'},
+      {f:'[Nombre de marca] [Ciudad] — [servicio principal]', n:'Útil si compites con sucursales o marcas parecidas en el nombre.'},
+      {f:'[Nombre de marca] | Sitio oficial', n:'Sirve cuando hay confusión con imitadores o terceros.'}
+    ],
+    discoverTitleHint:null, discoverMetaHint:null, discoverFormulas:[],
+    preview:{buscador:'Con Todo y Marketing — agencia de marketing digital', discover:'Por qué cada vez más pymes están cambiando de agencia de marketing'}
+  }
+};
+
+let currentIntent = 'informacional';
+let currentChannel = 'buscador';
+
+function updatePreview(){
+  const cfg = INTENTS[currentIntent];
+  const label = document.getElementById('previewLabel');
+  const titleEl = document.getElementById('previewTitle');
+  const dot = document.getElementById('previewDot');
+  const names = {informacional:'Informacional', comercial:'Comercial', transaccional:'Transaccional', navegacional:'Navegacional'};
+  const chNames = {buscador:'Buscador', discover:'Discover'};
+
+  titleEl.classList.add('fade');
+  dot.style.background = cfg.color;
+  setTimeout(()=>{
+    label.textContent = `${names[currentIntent]} · ${chNames[currentChannel]}`;
+    titleEl.textContent = (cfg.preview && cfg.preview[currentChannel]) ? cfg.preview[currentChannel] : '—';
+    titleEl.classList.remove('fade');
+  }, 140);
+}
+
+function setChannel(ch){
+  currentChannel = ch;
+  document.querySelectorAll('.channel-toggle button').forEach(b=>b.classList.toggle('active', b.dataset.channel===ch));
+  document.getElementById('cardBuscador').classList.toggle('active', ch==='buscador');
+  document.getElementById('cardDiscover').classList.toggle('active', ch==='discover');
+  document.getElementById('titleFieldLabel').textContent = ch==='discover' ? 'Título para Discover' : 'Título (title tag)';
+  document.getElementById('metaFieldLabel').textContent = ch==='discover' ? 'Bajada / preview text' : 'Meta descripción';
+  renderPanel();
+  updatePreview();
+  runCheck();
+}
+
+function renderPanel(){
+  const cfg = INTENTS[currentIntent];
+  document.documentElement.style.setProperty('--intent', cfg.color);
+  document.documentElement.style.setProperty('--intent-bg', cfg.colorBg);
+
+  const discoverBlocked = currentChannel==='discover' && currentIntent==='navegacional';
+  const titleHint = currentChannel==='discover' ? cfg.discoverTitleHint : cfg.titleHint;
+  const metaHint = currentChannel==='discover' ? cfg.discoverMetaHint : cfg.metaHint;
+
+  document.getElementById('panel').innerHTML = `
+    <span class="goal-label"><span class="gdot"></span>Objetivo del lector</span>
+    <div class="goal-text">${cfg.goal}</div>
+    ${discoverBlocked ? `
+      <div class="panel-col">
+        <p><b>Ojo con Discover acá:</b> no funciona bien para contenido puramente de marca — corre con contenido de interés, no con búsqueda de nombre. Cambia el ángulo de "somos [marca]" a uno de interés genuino, por ejemplo "por qué las pymes están cambiando de [categoría de servicio] este año".</p>
+      </div>
+    ` : `
+    <div class="panel-cols">
+      <div class="panel-col">
+        <h4>Título y ${currentChannel==='discover' ? 'bajada' : 'meta'}</h4>
+        <p><b>Título:</b> ${titleHint}</p>
+        <p><b>${currentChannel==='discover' ? 'Bajada' : 'Meta descripción'}:</b> ${metaHint}</p>
+      </div>
+      <div class="panel-col">
+        <h4>Estructura de la página</h4>
+        <ul class="struct-list">${cfg.structure.map(s=>`<li>${s}</li>`).join('')}</ul>
+      </div>
+    </div>
+    `}
+  `;
+
+  document.getElementById('brandGroup').style.display = currentIntent==='navegacional' ? 'block' : 'none';
+
+  const formulaSet = currentChannel==='discover' ? cfg.discoverFormulas : cfg.formulas;
+  document.getElementById('formulaGrid').innerHTML = formulaSet.length ? formulaSet.map(item => `
+    <div class="formula-card" onclick="loadFormula('${item.f.replace(/'/g,"\\'")}')">
+      <div class="formula">${item.f}</div>
+      <div class="note">${item.n}</div>
+    </div>
+  `).join('') : `<div class="formula-card"><p style="font-size:13px;color:var(--ink-faint);margin:0;">Para navegacional + Discover no hay fórmulas de marca — revisa la nota de arriba y trabaja un ángulo de interés en vez de un ángulo de marca.</p></div>`;
+}
+
+function setIntent(key){
+  currentIntent = key;
+  document.querySelectorAll('.intent-btn').forEach(b=>b.classList.toggle('active', b.dataset.intent===key));
+  renderPanel();
+  updatePreview();
+  runCheck();
+}
+
+function loadFormula(text){
+  document.getElementById('titleInput').value = text;
+  runCheck();
+  document.getElementById('titleInput').scrollIntoView({behavior:'smooth', block:'center'});
+}
+
+function checkRow(pass, label, detail, manual){
+  const cls = manual ? 'manual' : (pass ? 'pass' : 'fail');
+  const mark = manual ? '·' : (pass ? '✓' : '✗');
+  return `<div class="check-item ${cls}"><div class="mark">${mark}</div><div class="txt"><b>${label}</b>${detail ? `<span>${detail}</span>` : ''}</div></div>`;
+}
+
+const DISCOVER_TRIGGERS = ["casi nadie sabe","casi nadie nota","sin que te avisen","podrías perderlo","podrías estar perdiendo","hay una forma","sin darte cuenta","antes de que","lo que no te explican","lo que no sabías","lo que nadie te cuenta","sin saberlo","y no saben","el error que","por qué cada vez más","podría salirte más caro"];
+const DISCOVER_BANNED = ["truco legal","no vas a creer","quedarás en shock","así de fácil","el secreto que nadie","nadie te lo dijo pero","indignante"];
+const DISCOVER_DIRECT_ADDRESS = /\b(tú|tu|tus|puedes|podrías|te corresponde|tienes|debes|te conviene)\b/i;
+const ALLOWED_ACRONYMS = new Set(["SEO","SEM","PYME","PYMES","CTA","IA","FAQ"]);
+
+function hasObscureAcronym(text){
+  const matches = text.match(/\b[A-ZÁÉÍÓÚÑ]{2,6}\b/g) || [];
+  return matches.some(w => !ALLOWED_ACRONYMS.has(w));
+}
+
+function runCheck(){
+  const title = document.getElementById('titleInput').value.trim();
+  const meta = document.getElementById('metaInput').value.trim();
+  const kw = document.getElementById('kwInput').value.trim().toLowerCase();
+  const brand = document.getElementById('brandInput').value.trim().toLowerCase();
+  const lowerT = title.toLowerCase();
+
+  const tLen = title.length, mLen = meta.length;
+  const tCount = document.getElementById('titleCount');
+  const mCount = document.getElementById('metaCount');
+  const tMax = currentChannel==='discover' ? 100 : 60;
+  const mMax = currentChannel==='discover' ? 150 : 158;
+  tCount.textContent = `${tLen} / ${tMax} caracteres`;
+  tCount.classList.toggle('over', tLen>tMax);
+  mCount.textContent = `${mLen} / ${mMax} caracteres`;
+  mCount.classList.toggle('over', mLen>mMax);
+
+  if(!title && !meta){
+    document.getElementById('checklist').innerHTML = '';
+    document.getElementById('scoreCircle').textContent = '—';
+    document.getElementById('scoreCircle').className = 'score-circle mid';
+    document.getElementById('scoreVerdict').textContent = 'Escribe un título para empezar.';
+    return;
+  }
+
+  let titleItems = [], metaItems = [];
+  let pass = 0, total = 0;
+  const push = (arr, ok, label, detail, manual=false) => {
+    if(!manual){ total++; if(ok) pass++; }
+    arr.push(checkRow(ok, label, detail, manual));
+  };
+
+  push(titleItems, tLen>0 && tLen<=tMax, `Largo del título (≤${tMax} caracteres)`, tLen>tMax ? `Tienes ${tLen}, se puede cortar.` : `${tLen} caracteres.`);
+
+  if(currentChannel === 'buscador'){
+    if(kw){
+      push(titleItems, lowerT.includes(kw), 'Contiene la palabra clave', lowerT.includes(kw) ? '' : 'No encuentro tu palabra clave en el título.');
+    } else {
+      titleItems.push(checkRow(false, 'Palabra clave', 'Escribe tu keyword arriba para revisar esto.', true));
+    }
+    if(currentIntent === 'informacional'){
+      const infoPattern = /^(cómo|qué|por qué|para qué|cuándo|dónde|cuál|guía|significado)/i;
+      const isQuestion = /\?\s*$/.test(title) || infoPattern.test(title.trim());
+      push(titleItems, isQuestion, 'Formato de pregunta o guía', isQuestion ? '' : 'Prueba abrir con "cómo", "qué es" o cerrar con "?".');
+      const salesy = /\b(compra ahora|oferta|descuento|cotiza)\b/i.test(title);
+      push(titleItems, !salesy, 'Sin lenguaje de venta agresivo', salesy ? 'Este no es el momento de vender, es de responder.' : '');
+    }
+    if(currentIntent === 'comercial'){
+      const compPattern = /\b(mejor|mejores|vs|versus|comparaci[oó]n|comparativa|opiniones|reseñas|cuál elegir|precios)\b/i;
+      push(titleItems, compPattern.test(title), 'Usa lenguaje comparativo', compPattern.test(title) ? '' : 'Agrega "mejor", "vs", "comparación" u "opiniones".');
+    }
+    if(currentIntent === 'transaccional'){
+      const actionPattern = /\b(compra|comprar|cotiza|cotizar|contrata|contratar|reserva|reservar|pide|solicita|agenda|agendar|arrienda)\b/i;
+      push(titleItems, actionPattern.test(title), 'Tiene un verbo de acción', actionPattern.test(title) ? '' : 'Agrega "cotiza", "contrata", "reserva" o similar.');
+      const pricePattern = /[\$%]|\bdesde\b|\bgratis\b|\bstock\b/i;
+      push(titleItems, pricePattern.test(title), 'Menciona precio, oferta o disponibilidad', pricePattern.test(title) ? '' : 'Un precio o "desde $" ayuda a calificar el clic.');
+    }
+    if(currentIntent === 'navegacional'){
+      if(brand){
+        push(titleItems, lowerT.includes(brand), 'Incluye el nombre de la marca', lowerT.includes(brand) ? '' : 'El título debería empezar con el nombre de marca.');
+      } else {
+        titleItems.push(checkRow(false, 'Nombre de marca', 'Escribe el nombre de tu marca arriba para revisar esto.', true));
+      }
+      push(titleItems, title.length<=40, 'Corto y directo, sin relleno', title.length<=40 ? '' : 'Para navegacional, más corto suele ser mejor.');
+    }
+  } else {
+    push(titleItems, /[\d$%]/.test(title), 'Tiene un dato concreto', /[\d$%]/.test(title) ? '' : 'Agrega un número, monto o %.');
+    push(titleItems, DISCOVER_DIRECT_ADDRESS.test(title), 'Habla directo al lector', DISCOVER_DIRECT_ADDRESS.test(title) ? '' : 'Prueba con "tú", "puedes" o "te conviene".');
+    const hasTrigger = DISCOVER_TRIGGERS.some(p=>lowerT.includes(p));
+    push(titleItems, hasTrigger, 'Tiene gancho de curiosidad o urgencia', hasTrigger ? '' : 'Falta un gatillo tipo "sin saberlo", "el error que", "casi nadie sabe".');
+    push(titleItems, !hasObscureAcronym(title), 'Sin siglas oscuras', hasObscureAcronym(title) ? 'Hay una sigla que el lector podría no entender.' : '');
+    const banned = DISCOVER_BANNED.some(p=>lowerT.includes(p));
+    push(titleItems, !banned, 'Sin clickbait barato', banned ? 'Contiene una frase de la lista negra.' : '');
+  }
+
+  if(currentChannel === 'buscador'){
+    push(metaItems, mLen>=120 && mLen<=158, 'Largo ideal (120–158 caracteres)', mLen===0 ? 'Aún no escribes la meta descripción.' : (mLen<120 ? 'Muy corta, puedes sumar más contexto.' : (mLen>158 ? 'Se corta en el resultado de búsqueda.' : '')));
+    if(currentIntent === 'informacional'){
+      const p = /\b(aprende|descubre|te explicamos|guía|paso a paso|todo sobre)\b/i.test(meta);
+      push(metaItems, p, 'Promete una respuesta clara', p ? '' : 'Prueba con "te explicamos", "guía" o "paso a paso".');
+    }
+    if(currentIntent === 'comercial'){
+      const p = /\b(precio|calidad|opciones|comparamos|revisamos|cobertura|soporte)\b/i.test(meta);
+      push(metaItems, p, 'Menciona criterios de comparación', p ? '' : 'Nombra qué se compara: precio, calidad, cobertura, etc.');
+    }
+    if(currentIntent === 'transaccional'){
+      const p = /\b(cotiza|compra|contáctanos|pide tu|agenda|solicita|reserva)\b/i.test(meta);
+      push(metaItems, p, 'Tiene llamado a la acción', p ? '' : 'Cierra con una acción concreta: "cotiza", "agenda", "pide tu".');
+    }
+    if(currentIntent === 'navegacional'){
+      push(metaItems, mLen>0, 'Refuerza qué es la marca', mLen>0 ? '' : 'Explica en una línea qué es y por qué confiar.');
+    }
+  } else {
+    push(metaItems, mLen>0 && mLen<=150, 'Bajada corta (≤150 caracteres, 2 líneas)', mLen===0 ? 'Aún no escribes la bajada.' : (mLen>150 ? 'Muy larga para un preview de feed.' : ''));
+    push(metaItems, /[\d$%]/.test(meta), 'Suma el dato más sorpresivo o la fecha límite', /[\d$%]/.test(meta) ? '' : 'Agrega el número o plazo más urgente de la nota.');
+    metaItems.push(checkRow(false, 'No spoilea todo el contenido', 'Esto no lo puede medir el corrector — revísalo tú.', true));
+  }
+
+  document.getElementById('checklist').innerHTML = `
+    <div class="check-block"><div class="block-title">Título</div>${titleItems.join('')}</div>
+    <div class="check-block"><div class="block-title">${currentChannel==='discover' ? 'Bajada' : 'Meta descripción'}</div>${metaItems.join('')}</div>
+  `;
+
+  const score = total ? Math.round((pass/total)*100) : 0;
+  const circle = document.getElementById('scoreCircle');
+  const verdict = document.getElementById('scoreVerdict');
+  circle.textContent = score;
+  if(score>=80){ circle.className='score-circle good'; verdict.textContent='Bien encaminado para esta combinación.'; }
+  else if(score>=50){ circle.className='score-circle mid'; verdict.textContent='Vas bien, pero revisa lo que falta abajo.'; }
+  else { circle.className='score-circle bad'; verdict.textContent='Todavía no calza con lo que busca este tipo de lector.'; }
+}
+
+setIntent('informacional');
+</script>
+</body>
+</html>
